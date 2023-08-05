@@ -6,47 +6,62 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  min-height: 100vh;
+  background: #e0dada;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #e0e3eb;
+  align-items: center;
 }
-.display {
-  height: 80px;
+.calculator {
+  width: 300px;
+  height: 500px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background: #131212;
+  overflow: hidden;
+}
+form input {
   width: 100%;
-  margin-bottom: 10px;
-  font-size: 25px;
-  outline: none;
+  height: 150px;
   border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
+  background: #000;
   text-align: right;
-  color: black;
   pointer-events: none;
 }
-.container {
-  position: relative;
-  background: #fff;
-  max-width: 300px;
-  width: 100%;
-  padding: 10px 20px 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-}
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.buttons button {
-  padding: 10px;
-  border-radius: 7px;
-  border: none;
-  background-color: #eee;
-  font-size: 1.3rem;
+button {
+  flex: 0 0 22%;
+  margin: 5px 0;
+  border: 1px solid #000;
+  width: 60px;
+  height: 52px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
 }
-.buttons button:active {
-  transform: scale(1);
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
-.operator {
-  color: aqua;
+.btn-yellow {
+  background: #db6b20;
+  color: #fff;
 }
+.btn-grey {
+  background: #e0d8d8;
+  /* color: #fff; */
+}
+
+.btn-equal {
+  background: #1dbe1d;
+}
+.btn-clear {
+  background: #e91717;
+}
+
